@@ -1,0 +1,20 @@
+import logging
+
+class Config:
+
+    class Environ:
+        debug = True
+
+class ColorScheme:
+
+    INFO_LABEL_BACKGROUND_COLOR = '#476685'
+    LABEL_COLOR = '#129985'
+    VALUE_COLOR = '#4ec3db'
+    DIRECTION_BTN_BACKGROUND_COLOR = '#139FAD'
+    MAIN_TEXT_COLOR = '#AEDDE1'
+    SUCCESS_BACKGROUND_COLOR = '#00af5d'
+    ERROR_BACKGROUND_COLOR = '#af1700'
+    FONT_COLOR = '#333333'
+    BACKGROUND_COLOR = '#000000'
+    BACKGROUND_COLOR_ALT = '#222222'
+    BACKGROUND_COLOR_SUB = '#3f4d6d'
