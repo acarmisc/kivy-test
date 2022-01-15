@@ -66,12 +66,18 @@ class WelcomeLayout(BoxLayout):
         btn_next = Button(text='Next')
         btn_next.size_hint_y = 0.2
 
+        btn_next.bind(on_press=self.openit)
         self.add_widget(btn_next)
 
         pb = ProgressBar(max=1000)
         self.add_widget(pb)
 
         pb.value = 750
+
+    def openit(self, *args, **kwargs):
+        print("Touch Up ")
+        from subprocess import Popen, PIPE
+        process = Popen(['python', 'views.py'], stdout=PIPE, stderr=PIPE)
 
 
 class LabelRow(GridLayout):
