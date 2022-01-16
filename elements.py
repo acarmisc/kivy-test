@@ -143,7 +143,6 @@ class TimelineSlider(GridLayout):
         self.cols = 2
 
         s = Slider(min=-100, max=100, value=25)
-        lbl = Label(text='Mission review')
 
         lbl = Label(text='Mission review')
 
@@ -245,14 +244,14 @@ class InfoRow(GridLayout):
 
         label = Label(text=kwargs['label'])
 
-        label.color = HexColor(ColorScheme.FONT_COLOR).channels
+        #label.color = HexColor(ColorScheme.FONT_COLOR).channels
         label.size_hint_x = 0.2
         label.text_size = (80, None)
         label.halign = 'left'
 
         value = Label(text=kwargs['value'])
         value.text_size = (80, None)
-        value.color = HexColor(ColorScheme.VALUE_COLOR).channels
+        #value.color = HexColor(ColorScheme.VALUE_COLOR).channels
 
         self.add_widget(label)
         self.add_widget(value)

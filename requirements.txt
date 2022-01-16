@@ -12,7 +12,7 @@ enum34==1.1.10
 futures==3.3.0
 gast==0.2.2
 idna==2.10
-Kivy==1.10.1
+Kivy==1.10.0
 Kivy-Garden==0.1.4
 kivy-garden.graph==0.4.0
 numpy==1.16.6
