@@ -55,27 +55,22 @@ class MapExtendedFrame(BoxLayout):
 
         splitter = Splitter(sizable_from='right')
         base_lon = 9.824520076125197
-
         base_lat = 44.05250694080099
 
         self.map = MapView(zoom=8, lon=base_lon, lat=base_lat)
 
         def on_press(*args, **kwargs):
-            # FIXME: set marker on blur
             print(args)
 
             item = args[1]
             item.source = 'assets/marker_focus.png'
-            print(kwargs)
-            print('ciao')
 
-            for el in [(9.824520076125197, 44.05250694080099)]:
-                lon = el[0]
-                lat = el[1]
-                txt = 'bla'
-                self.map.add_marker(MapMarker(lon=lon, lat=lat, source='assets/marker1.png', on_press=partial(on_press,
-                                                                                                              txt,
-                                                                                                              self.map)))
+        for el in [(9.824520076125197, 44.05250694080099)]:
+            lon = el[0]
+            lat = el[1]
+            txt = 'bla'
+            print(lon, lat)
+            self.map.add_marker(MapMarker(lon=lon, lat=lat, on_press=partial(on_press, txt, self.map)))
 
         # self.map.add_widget(layer)
 
@@ -99,7 +94,7 @@ class PointDetails(GridLayout):
 
         self.add_widget(InfoRow(label='Coordinates', value='9.824520076,\n44.052506940'))
 
-        self.add_widget(InfoRow(label='Time', value='09:04:12'))
+        self.add_widget(InfoRow(label='Time', value='19:24:22'))
         self.add_widget(InfoRow(label='Mode', value='AUV'))
         self.add_widget(InfoRow(label='Motor 1', value='0'))
         self.add_widget(InfoRow(label='Motor 2', value='0'))

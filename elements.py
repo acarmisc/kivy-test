@@ -245,12 +245,12 @@ class InfoRow(GridLayout):
         label = Label(text=kwargs['label'])
 
         #label.color = HexColor(ColorScheme.FONT_COLOR).channels
-        label.size_hint_x = 0.2
-        label.text_size = (280, None)
-        label.halign = 'right'
+        label.size_hint_x = 1
+        #label.text_size = (280, None)
+        label.halign = 'left'
 
         value = Label(text=kwargs['value'])
-        value.text_size = (180, None)
+        #value.text_size = (180, None)
         #value.color = HexColor(ColorScheme.VALUE_COLOR).channels
 
         self.add_widget(label)

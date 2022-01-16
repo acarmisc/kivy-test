@@ -122,7 +122,7 @@ class Modes(GridLayout):
 
         graph.add_widget(pie)
 
-        graph.padding = ['100dp', '40dp']
+        graph.padding = ['40dp', '10dp']
 
         values = GridLayout(cols=1)
         values.add_widget(SectionSubTitle(local_title='Values'))
