@@ -42,7 +42,6 @@ class MagnetometerGraph(GridLayout):
 
         graph = Graph(xlabel=x_name, ylabel=str(y_names),
                       x_ticks_major=60, y_ticks_major=1000000,
-
                       y_grid_label=True, x_grid_label=True, padding=2,
                       x_grid=True, y_grid=True, xmin=-0, xmax=700, ymin=kwargs.get('ymin'),
                       ymax=kwargs.get('ymax'))
@@ -57,11 +56,11 @@ class MagnetometerGraph(GridLayout):
 
             plot.points = []
 
-            #for index, row in data.iterrows():
-            #    plot.points.append((row[x_name], row[y_name]))
+            for index, row in data.iterrows():
+                plot.points.append((float(row[x_name]), float(row[y_name])))
 
-            for i in range(0, 500):
-                plot.points.append((i, random.randint(0, 2000000)))
+            #for i in range(0, 500):
+            #    plot.points.append((i, random.randint(0, 2000000)))
 
             graph.add_plot(plot)
 
@@ -94,11 +93,11 @@ class MotorGraph(GridLayout):
 
             plot.points = []
 
-        #for index, row in data.iterrows():
-        #    plot.points.append((float(row[x_name]), float(row[y_name])))
+        for index, row in data.iterrows():
+            plot.points.append((float(row[x_name]), float(row[y_name])))
 
-        for i in range(0, random.randint(0, 40)):
-            plot.points.append((i, float(random.randint(0,100))))
+        #for i in range(0, random.randint(0, 40)):
+        #    plot.points.append((i, float(random.randint(0,100))))
 
         graph.add_plot(plot)
 

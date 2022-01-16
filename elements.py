@@ -47,7 +47,7 @@ class WelcomeLayout(BoxLayout):
         self.color = HexColor(ColorScheme.MAIN_TEXT_COLOR).channels
 
         title = AppTitle()
-        subtitle = Label(text='Select data folder to create a mission DB', font_size='30sp', halign='right')
+        subtitle = Label(text='Select data folder to create a mission DB', font_size='24sp', halign='right')
         subtitle.size_hint_y = 0.5
 
         self.add_widget(title)
@@ -84,7 +84,7 @@ class LabelRow(GridLayout):
     def __init__(self, *args, **kwargs):
         background_color = kwargs.pop('background_color', '#476685')
         background_alpha = kwargs.pop('background_alpha', 1)
-        self.size_hint_y = 0.3
+        self.size_hint_y = 0.2
 
         super(LabelRow, self).__init__(*args, **kwargs)
 
@@ -171,7 +171,7 @@ class StatusBar(LabelRow):
 
         self.cols = 3
 
-        db_path = Label(text='/Users/andrea/Documents/S3M/002', font_size='15dp')
+        db_path = Label(text='/Users/user/Documents/rovtool/002', font_size='15dp')
 
         db_size = Label(text='4.3 GB', font_size='15dp')
 
@@ -189,7 +189,7 @@ class AppTitle(LabelRow):
 
         self.cols = 1
 
-        text = Label(text='S3MAG Mission Review', font_size='50dp', )
+        text = Label(text='RovTool Mission Review', font_size='30dp', )
 
         text.halign = 'left'
         self.add_widget(text)
@@ -207,7 +207,7 @@ class SectionSubTitle(LabelRow):
 
         self.cols = 1
 
-        text = Label(text=kwargs['local_title'], font_size='18dp', )
+        text = Label(text=kwargs['local_title'], font_size='12dp', )
 
         text.halign = 'left'
         self.add_widget(text)
@@ -220,7 +220,7 @@ class SectionTitle(LabelRow):
 
         self.cols = 1
 
-        text = Label(text=kwargs['local_title'], font_size='25sp', )
+        text = Label(text=kwargs['local_title'], font_size='22sp', )
 
         text.halign = 'left'
         self.add_widget(text)
@@ -246,11 +246,11 @@ class InfoRow(GridLayout):
 
         #label.color = HexColor(ColorScheme.FONT_COLOR).channels
         label.size_hint_x = 0.2
-        label.text_size = (80, None)
-        label.halign = 'left'
+        label.text_size = (280, None)
+        label.halign = 'right'
 
         value = Label(text=kwargs['value'])
-        value.text_size = (80, None)
+        value.text_size = (180, None)
         #value.color = HexColor(ColorScheme.VALUE_COLOR).channels
 
         self.add_widget(label)
