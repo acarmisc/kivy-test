@@ -14,15 +14,15 @@ class BrowserFrame(BoxLayout):
         self.orientation = 'vertical'
 
         if platform == 'win':
-            user_path = dirname(expanduser('~')) + sep + 'Documents'
+            user_path = dirname(expanduser('~')) + sep + 'datafiles'
 
         else:
-            user_path = expanduser('~') + sep + 'Documents'
+            user_path = expanduser('~') + sep + 'datafiles'
 
         browser = FileChooserIconView(select_string='Select',
-                                      favorites=[(user_path, 'Documents')])
+                                      favorites=[(user_path, 'datafiles')])
 
-        browser.path = './examples/'
+        browser.path = './datafiles/'
         browser.bind(
             on_success=self._fbrowser_success,
             on_canceled=self._fbrowser_canceled)
