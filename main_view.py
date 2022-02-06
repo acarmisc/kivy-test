@@ -23,13 +23,13 @@ class MainView(GridLayout):
         overview = OverviewFrame()
         self.add_widget(overview)
 
-        # timeline = TimelineSlider()
-        # self.add_widget(timeline)
+        #timeline = TimelineSlider()
+        #self.add_widget(timeline)
 
-        # c = CoordinatesView(spacing=10, size_hint_y=None)
-        # coordinates = ScrollView(size_hint=(1, None), size=(Window.width, 100))
-        # coordinates.add_widget(c)
-        # self.add_widget(coordinates)
+        c = CoordinatesView(spacing=10, size_hint_y=None)
+        coordinates = ScrollView(size_hint=(1, None), size=(Window.width, 100))
+        coordinates.add_widget(c)
+        self.add_widget(coordinates)
 
-        # graph = GraphExample()
-        # self.add_widget(graph)
+        #graph = GraphExample()
+        #self.add_widget(graph)

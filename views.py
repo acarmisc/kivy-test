@@ -61,9 +61,9 @@ class CoreView(TabbedPanel):
         th.add_widget(EmptyFrame())
         self.add_widget(th)
 
-        th = TabbedPanelItem(text='Video')
-        th.add_widget(EmptyFrame())
-        self.add_widget(th)
+        #th = TabbedPanelItem(text='Video')
+        #th.add_widget(EmptyFrame())
+        #self.add_widget(th)
 
         th = TabbedPanelItem(text='Configuration')
         th.add_widget(ConfigurationFrame())
@@ -88,5 +88,5 @@ class MyApp(App):
 if __name__ == '__main__':
     from kivy.core.window import Window
 
-    #Window.size = (1300, 800)
+    Window.size = (1300, 800)
     MyApp().run()
